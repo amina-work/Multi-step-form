@@ -42,10 +42,80 @@ ul{
 .hidden{
     display: none;
 }
-/* ============================== Sidebar start ============================== */
 .main-container{
     margin: 0 250px;
-    border: 16px solid var(--clr-White);
+    padding: 16px;
+    background-color: var(--clr-White);
     border-radius: 10px;
+    height: 565px;
     display: flex;
+}
+/* ============================== Sidebar start ============================== */
+.sidebar{
+    flex: 0 40%;
+    max-width: 40%;
+    background-image: url("/assets/images/bg-sidebar-desktop.svg");
+    object-fit: cover;
+    border-radius: 10px;
+}
+.sidebar ul{
+    padding: 32px;
+}
+.sidebar ul li{
+    display: flex;
+    padding-bottom: 32px;
+}
+.sidebar ul li .left{
+    flex: 0 20%;
+    max-width: 20%;
+    align-items: center;
+    margin-right: 10px;
+}
+.sidebar ul li .right{
+    flex: 0 80%;
+    max-width: 80%;
+}
+.sidebar ul li .left h1{
+    padding: 10px;
+    font-size: 14px;
+    color: var(--clr-Magnolia);
+    align-content: center;
+    border: 1px solid var(--clr-Magnolia);
+    border-radius: 50%;
+}
+.sidebar ul li .left h1:active{
+    color: var(--clr-Marine);
+    background-color: var(--clr-Pastel);
+}
+.sidebar ul li div small{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--clr-Cool);
+}
+.sidebar ul li div h3{
+    font-size: 14px;
+    color: var(--clr-Magnolia);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============================== Home Section ============================== */
+.section-title{
+
+    color: var(--clr-Marine);
+}
+.section-subtitle{
+    padding-top: 10px;
+    padding-bottom: 45px;
+    font-size: 12px;
+    color: var(--clr-Cool);
+}
+.home{
+    flex: 0 60%;
+    max-width: 60%;
+    margin: 50px;
+}
+.section-btn{
+    position: relative;
+    bottom: 0;
 }
