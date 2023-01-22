@@ -1,3 +1,4 @@
+/* Toggle Menu */
 const nav = document.querySelector(".nav"),
     navList = nav.querySelectorAll("li.left"),
     totalNavList = navList.length;
