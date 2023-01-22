@@ -119,3 +119,29 @@ ul{
     position: relative;
     bottom: 0;
 }
+/* ============================== Step1 Section ============================== */
+.form-item{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.form-item label{
+    flex: 0 100%;
+    max-width: 100%;
+    font-size: 10px;
+    padding-bottom: 5px;
+    color: var(--clr-Marine);
+}
+.form-item input{
+    display: block;
+    flex: 0 100%;
+    max-width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--clr-Cool);
+    color: var(--clr-Marine);
+    font-weight: 400;
+}
+.form-item input:hover, .form-item input:active{
+    border: 1px solid var(--clr-Marine);
+}
