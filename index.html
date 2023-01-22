@@ -7,162 +7,29 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Multi-step form</title>
+
   <link rel="stylesheet" href="./css/styles.css">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  -->
+
 </head>
 <body>
-  <div class="main-container">
-    <!-- Sidebar start -->
-    <div class="sidebar">
-      <ul class="nav">
-        <li>
-          <div class="left"><a href="#step1" class="active">1</a></div>
-          <div class="right"><small>Step 1</small><h3>Your info</h3></div>
-        </li>
-        <li>
-          <div class="left"><a href="#step2">2</a></div>
-          <div class="right"><small>Step 2</small><h3>Select plan</h3></div>
-        </li>
-        <li>
-          <div class="left"><a href="#step3">3</a></div>
-          <div class="right"><small>Step 3</small><h3>Add-ons</h3></div></li>
-        <li>
-          <div class="left"><a href="#step4">4</a></div>
-          <div class="right"><small>Step 3</small><h3>Summary</h3></div>
-        </li>
-      </ul>
-    </div>
-    <!-- Sidebar end -->
+  <div class="container" id="container">
+    <div class="step-display">
+      <div class="buttons">
+        <div class="btn1" id="btn1"><p>1</p></div>
+        <div class="btn2" id="btn2"><p>2</p></div>
+        <div class="btn3" id="btn3"><p>3</p></div>
+        <div class="btn4" id="btn4"><p>4</p></div>
+      </div>
 
-    <div class="home">
-      <!-- Step 1 start -->
-      <section id="#step1" class="step1 section active">
-        <div class="section-title"><h1>Personal info</h1></div>
-        <div class="section-subtitle"><p>Please provide your name, email address, and phone number.</p></div>
-        <div class="section-body">
-          <form action="submit" class="contact-form">
-            <div class="form-item">
-              <div><label for="name">Name</label><span class="error">This field is required</span></div>
-              <input id="name" type="text" class="form-control" placeholder="e.g. Stephen King" required>
-            </div>
-            <div class="form-item">
-              <div><label for="email">Email Address</label><span class="error">This field is required</span></div>
-              <input id="email" type="email" class="form-control" placeholder="e.g. stephenking@lorem.com" required>
-            </div>
-            <div class="form-item">
-              <div><label for="phone">Phone Number</label><span class="error">This field is required</span></div>
-              <input id="phone" type="number" class="form-control" placeholder="e.g. +1 234 567 890" required>
-            </div>
-            <div class="section-btn"><button type="submit" class="btn">Next Step</button></div>
-          </form>
-        </div>
-      </section>
-      <!-- Step 1 end -->
-
-      <!-- Step 2 start -->
-      <section id="#step2" class="step2 section">
-        <div class="section-title"><h1>Select your plan</h1></div>
-        <div class="section-subtitle"><p>You have the option of monthly or yearly billing.</p></div>
-        <div class="section-body">
-          <div class="row">
-            <!--The grid-->
-            <div class="choose-grid">
-              <div class="grid-item">
-                <h3>Arcade</h3>
-                <p>$9/mo</p>
-              </div>
-              <div class="grid-item">
-                <h3>Advanced</h3>
-                <p>$12/mo</p>
-              </div>
-              <div class="grid-item">
-                <h3>Pro</h3>
-                <p>$15/mo</p>
-              </div>
-            </div>
-            <!--the grid end-->
-            <!--the flex-->
-            <div class="choose-flex">
-              <div class="flex-item"><h3>Monthly</h3></div>
-              <div class="flex-item"><h3>Yearly</h3></div>
-            </div>
-            <!--the flex end-->
-          </div>
-        </div>
-        <div class="section-btns">
-          <div class="btn"><a href="#">Go Back</a></div>
-          <div class="section-btn"><a href="#">Next Step</a></div>
-        </div>
-      </section>
-      <!-- Step 2 end -->
-
-      <!-- Step 3 start -->
-      <section id="#step3" class="step3 section">
-        <div class="section-title"><h1>Pick add-ons</h1></div>
-        <div class="section-subtitle"><p>Add-ons help enhance your gaming experience.</p></div>
-        <div class="section-body">
-          <div class="container">
-            <label class="container">
-              <input type="radio" name="radio" checked>
-              <span class="check"></span>
-              <h3>Online service</h3><p>Access to multiplayer games</p><h3>+$1/mo</h3>
-            </label>
-            <label class="container">
-              <input type="radio" name="radio" checked>
-              <span class="check"></span>
-              <h3>Larger storage</h3><p>Extra 1TB of cloud save</p><h3>+$2/mo</h3>
-            </label>
-            <label class="container">
-              <input type="radio" name="radio" checked>
-              <span class="check"></span>
-              <h3>Customizable Profile</h3><p>Custom theme on your profile</p><h3>+$2/mo</h3>
-            </label>
-          </div>
-        </div>
-        <div class="section-btns">
-          <div class="btn"><a href="#">Go Back</a></div>
-          <div class="section-btn"><a href="#">Next Step</a></div>
-        </div>
-      </section>
-      <!-- Step 3 end -->
-
-      <!-- Step 4 start -->
-      <section id="#step4" class="step4 section">
-        <div class="section-title"><h1>Finishing up</h1></div>
-        <div class="section-subtitle"><p>Double-check everything looks OK before confirming.</p></div>
-        <div class="section-body">
-          <!-- Dynamically add subscription and add-on selections here -->
-          <div class="total">
-            <p>Total (per month/year)</p>
-          </div>
-        </div>
-        <div class="section-btns">
-          <div class="btn"><a href="#">Go Back</a></div>
-          <div class="section-btn"><a href="#">Confirm</a></div>
-        </div>
-      </section>
-      <!-- Step 4 end -->
-
-      <!-- Step 5 start -->
-      <section id="step5" class="step5 hidden">
-        <h1>Thank you!</h1>
-        <p>Thanks for confirming your subscription! We hope you have fun 
-          using our platform. If you ever need support, please feel free 
-          to email us at support@loremgaming.com.</p>
-      </section>
-      <!-- Step 5 end -->
+      <div class="titles">
+        <div class="title1"><p>Step 1</p><span>Your info</span></div>
+        <div class="title2"><p>Step 2</p><span>Select plan</span></div>
+        <div class="title3"><p>Step 3</p><span>Add-ons</span></div>
+        <div class="title4"><p>Step 4</p><span>Summary</span></div>
+      </div>
     </div>
   </div>
-  
-  <div class="attribution hidden">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  <script src="./app.js"></script>
+
+  <script href="/app.js"></script>
 </body>
 </html>
