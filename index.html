@@ -35,7 +35,7 @@
     <div class="steps" id="steps">
       <!-- First Step "Your Info" Start -->
       <div class="step">
-        <div class="step-info" id="step-info">
+        <div class="step-info" id="stepInfo">
           <h1>Personal info</h1>
           <p class="desc">Please provide your name, email, address, and phone number.</p>
 
@@ -49,7 +49,7 @@
           <input type="text" name="" id="phone" placeholder="e.g. +1 234 567 890">
 
           <div class="btn-step1">
-            <button onclick="goStepTwo()" class="next-step-btn">Next Step</button>
+            <button onclick="goStepTwo();" class="next-step-btn">Next Step</button>
           </div>
         </div>
       </div>
@@ -60,16 +60,16 @@
         <h1>Select your plan</h1>
         <p class="desc">You have the option of monthly or yearly billing.</p>
         <!-- Monthly plans -->
-        <div class="plans" id="monthly-plans">
+        <div class="plans" id="monthlyPlans">
           <!-- Arcade Plan -->
-          <button class="plan-btn" id="monthly-plan-arc" onclick="getPrice1()">
+          <button class="plan-btn" id="monthlyPlanArc" onclick="getPrice1()">
             <img src="./assets/images/icon-arcade.svg" alt="">
             <p>Arcade</p>
             <span class="price" id="price1">$9/mo</span>
           </button>
 
           <!-- Advanced Plan -->
-          <button class="plan-btn" id="monthly-plan-adv" onclick="getPrice2()">
+          <button class="plan-btn" id="monthlyPlanAdv" onclick="getPrice2()">
             <img src="./assets/images/icon-advanced.svg" alt="">
             <p>Advanced</p>
             <span class="price" id="price2">$12/mo</span>
@@ -84,9 +84,9 @@
         </div>
 
         <!-- Yearly Plans-->
-        <div class="plans" id="yearly-plans">
+        <div class="plans" id="yearlyPlans">
           <!-- Arcade Yealy Plan -->
-          <button class="plan-btn" id="yearly-plan-arc" onclick="getPrice4()">
+          <button class="plan-btn" id="yearlyPlanArc" onclick="getPrice4()">
             <img src="./assets/images/icon-arcade.svg" alt="">
             <p>Arcade</p>
             <span class="price-year">$90/yr</span>
@@ -94,7 +94,7 @@
           </button>
 
           <!-- Advanced Yealy Plan -->
-          <button class="plan-btn" id="yearly-plan-adv" onclick="getPrice5()">
+          <button class="plan-btn" id="yearlyPlanAdv" onclick="getPrice5()">
             <img src="./assets/images/icon-advanced.svg" alt="">
             <p>Advanced</p>
             <span class="price-year">$120/yr</span>
@@ -102,7 +102,7 @@
           </button>
 
           <!-- Pro Yealy Plan -->
-          <button class="plan-btn" id="yearly-plan-pro" onclick="getPrice6()">
+          <button class="plan-btn" id="yearlyPlanPro" onclick="getPrice6()">
             <img src="./assets/images/icon-pro.svg" alt="">
             <p>Pro</p>
             <span class="price-year">$150/yr</span>
@@ -114,7 +114,7 @@
         <div class="toggle">
           <p class="monthly">Monthly</p>
           <label for="" class="check">
-            <input type="checkbox" name="" id="toggle" class="checkbox" onclick="reset()"><span></span>
+            <input type="checkbox" name="" id="toggle" class="checkbox" checked onclick="reset()"><span></span>
           </label>
           <p class="yearly">Yearly</p>
         </div>
@@ -234,6 +234,6 @@
     <!-- Form End -->
   </div>
 
-  <script href="/app.js"></script>
+  <script type="text/javascript" src="./app.js"></script>
 </body>
 </html>

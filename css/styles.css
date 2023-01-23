@@ -72,6 +72,10 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.btn1{
+    background-color: var(--clr-PastelBlue);
+    color: var(--clr-MarineBlue);
+}
 .btn1, .btn2, .btn3, .btn4{
     width: 40px;
     height: 40px;
@@ -109,7 +113,7 @@ body{
     position: inherit;
 }
 /* ====================================== Steps Section ====================================== */
-.hidden{display: none;}
+.hidden{display: none; flex-direction: column;}
 .steps{
     flex: 0 725px;
     max-width: 725px;
@@ -119,11 +123,11 @@ body{
     display: flex;
     flex-direction: column;
 }
-.step-info h1{
+.steps h1{
     font-family: ubuntu-bold;
     color: var(--clr-MarineBlue);
 }
-.step-info .desc{
+.steps .desc{
     color: var(--clr-CoolGray);
     margin-top: 10px;
     margin-bottom: 30px;
@@ -140,8 +144,17 @@ body{
     background-color: #174a8b;
 }
 /* ====================================== Step 1 Page ====================================== */
+.step-info .error{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .step-info .error p{
     color: var(--clr-MarineBlue);
+    font-size: 14px;
+}
+.step-info .error span{
+    color: var(--clr-StrawberryRed);
     font-size: 14px;
 }
 .step-info input{
@@ -165,4 +178,29 @@ body{
     position: relative;
     margin-left: 380px;
     margin-top: 100px;
+}
+
+/* ====================================== Step 2 Page ====================================== */
+.step2{
+    display: flex;
+    flex-direction: column;
+}
+.plans{
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+}
+.plans .plan-btn{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid var(--clr-CoolGray);
+    background-color: var(--clr-White);
+    cursor: pointer;
+}
+.plan-btn-clicked{
+    border: 1px solid var(--clr-PurplishBlue);
 }
