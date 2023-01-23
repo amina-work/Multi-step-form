@@ -13,6 +13,7 @@
 </head>
 <body>
   <div class="container" id="container">
+    <!-- Menu Start -->
     <div class="step-display">
       <div class="buttons">
         <div class="btn1" id="btn1"><p>1</p></div>
@@ -28,6 +29,209 @@
         <div class="title4"><p>Step 4</p><span>Summary</span></div>
       </div>
     </div>
+    <!-- Menu End -->
+
+    <!-- Form Start -->
+    <div class="steps" id="steps">
+      <!-- First Step "Your Info" Start -->
+      <div class="step">
+        <div class="step-info" id="step-info">
+          <h1>Personal info</h1>
+          <p class="desc">Please provide your name, email, address, and phone number.</p>
+
+          <div class="error"><p>Name</p><span id="error-name"></span></div>
+          <input type="text" name="" id="name" placeholder="e.g. Stephen King">
+
+          <div class="error"><p>Email Address</p><span id="error-email"></span></div>
+          <input type="email" name="" id="email" placeholder="e.g. stephenking@lorem.com">
+
+          <div class="error"><p>Phone Number</p><span id="error-phone"></span></div>
+          <input type="text" name="" id="phone" placeholder="e.g. +1 234 567 890">
+
+          <div class="btn-step1">
+            <button onclick="goStepTwo()" class="next-step-btn">Next Step</button>
+          </div>
+        </div>
+      </div>
+      <!-- First Step "Your Info" End -->
+
+      <!-- Second Step "Select Plan" Start -->
+      <div class="step2" id="step2">
+        <h1>Select your plan</h1>
+        <p class="desc">You have the option of monthly or yearly billing.</p>
+        <!-- Monthly plans -->
+        <div class="plans" id="monthly-plans">
+          <!-- Arcade Plan -->
+          <button class="plan-btn" id="monthly-plan-arc" onclick="getPrice1()">
+            <img src="./assets/images/icon-arcade.svg" alt="">
+            <p>Arcade</p>
+            <span class="price" id="price1">$9/mo</span>
+          </button>
+
+          <!-- Advanced Plan -->
+          <button class="plan-btn" id="monthly-plan-adv" onclick="getPrice2()">
+            <img src="./assets/images/icon-advanced.svg" alt="">
+            <p>Advanced</p>
+            <span class="price" id="price2">$12/mo</span>
+          </button>
+
+          <!-- Pro Plan -->
+          <button class="plan-btn" id="monthly-plan-pro" onclick="getPrice3()">
+            <img src="./assets/images/icon-pro.svg" alt="">
+            <p>Pro</p>
+            <span class="price" id="price3">$15/mo</span>
+          </button>
+        </div>
+
+        <!-- Yearly Plans-->
+        <div class="plans" id="yearly-plans">
+          <!-- Arcade Yealy Plan -->
+          <button class="plan-btn" id="yearly-plan-arc" onclick="getPrice4()">
+            <img src="./assets/images/icon-arcade.svg" alt="">
+            <p>Arcade</p>
+            <span class="price-year">$90/yr</span>
+            <small class="year-deal">2 months free</small>
+          </button>
+
+          <!-- Advanced Yealy Plan -->
+          <button class="plan-btn" id="yearly-plan-adv" onclick="getPrice5()">
+            <img src="./assets/images/icon-advanced.svg" alt="">
+            <p>Advanced</p>
+            <span class="price-year">$120/yr</span>
+            <small class="year-deal">2 months free</small>
+          </button>
+
+          <!-- Pro Yealy Plan -->
+          <button class="plan-btn" id="yearly-plan-pro" onclick="getPrice6()">
+            <img src="./assets/images/icon-pro.svg" alt="">
+            <p>Pro</p>
+            <span class="price-year">$150/yr</span>
+            <small class="year-deal">2 months free</small>
+          </button>
+        </div>
+
+        <!-- Toglle Btn Between the two-->
+        <div class="toggle">
+          <p class="monthly">Monthly</p>
+          <label for="" class="check">
+            <input type="checkbox" name="" id="toggle" class="checkbox" onclick="reset()"><span></span>
+          </label>
+          <p class="yearly">Yearly</p>
+        </div>
+
+        <div class="btn-step2">
+          <button onclick="backStepOne()" class="back-step-btn">Go Back</button>
+          <button onclick="goStepThree()" class="next-step-btn">Next Step</button>
+        </div>
+      </div>
+      <!-- Second Step "Select Plan" End -->
+
+      <!-- Third Step "Add-Ons" Start -->
+      <div class="step3" id="step3">
+        <h1>Pick add-ons</h1>
+        <p class="desc">Add-ons help enhance your gaming experience.</p>
+        <!-- Monthly Add-ons -->
+        <div id="monthly-addons">
+          <div class="addons-btn">
+            <div class="regroup">
+              <input type="checkbox" id="online-monthly" name="online" value="1">
+              <div class="addOn">
+                <p class="addons-size">Online service</p>
+                <span>Access to multiplayer games</span>
+              </div>
+            </div>
+            <p class="addons-price">+$1/mo</p>
+          </div>
+
+          <div class="addons-btn">
+            <div class="regroup">
+              <input type="checkbox" id="storage-monthly" name="storage" value="2">
+              <div class="addOn">
+                <p class="addons-size">Larger storage</p>
+                <span>1TB of cloud save</span>
+              </div>
+            </div>
+            <p class="addons-price">+$2/mo</p>
+          </div>
+
+          <div class="addons-btn">
+            <div class="regroup">
+              <input type="checkbox" id="custom-monthly" name="custom" value="2">
+              <div class="addOn">
+                <p class="addons-size">Customizable profile</p>
+                <span>Custom theme on your profile</span>
+              </div>
+            </div>
+            <p class="addons-price">+$2/mo</p>
+          </div>
+        </div>
+
+        <!-- Yearly Add-ons -->
+        <div id="yearly-addons">
+          <!-- Online-->
+          <div class="addons-btn">
+            <div class="regroup">
+              <input type="checkbox" id="online-yearly" name="online" value="10">
+              <div class="addon">
+                <p class="addons-size">Online service</p>
+                <span>Access to multiplayer games</span>
+              </div>
+            </div>
+            <p class="addons-price">+$10/yr</p>
+          </div>
+
+          <!-- storage-->
+          <div class="addons-btn">
+            <div class="regroup">
+              <input type="checkbox" id="storage-yearly" name="online" value="20">
+              <div class="addon">
+                <p class="addons-size">Larger storage</p>
+                <span>1TB of cloud save</span>
+              </div>
+            </div>
+            <p class="addons-price">+$20/yr</p>
+          </div>
+
+          <!-- Custom -->
+          <div class="addons-btn">
+            <div class="regroup">
+              <input type="checkbox" id="custom-yearly" name="online" value="20">
+              <div class="addon">
+                <p class="addons-size">Customizable profile</p>
+                <span>Custom theme on your profile</span>
+              </div>
+            </div>
+            <p class="addons-price">+$20/yr</p>
+          </div>
+        </div>
+        
+        <div class="btn-step3">
+          <button onclick="backStepTwo()" class="back-step-btn">Go Back</button>
+          <button onclick="goStepFour()" class="next-step-btn">Next Step</button>
+        </div>
+      </div>
+      <!-- Third Step "Add-Ons" End -->
+
+      <!-- Fourth Step "Summary" Start -->
+      <div class="step4" id="step4">
+        <h1>Finishing up</h1>
+        <p class="desc">Double-check everything looks OK before confirming.</p>
+      </div>
+      <!-- Fourth Step "Summary" End -->
+
+      <!-- Fifth Step "Thank You" Start -->
+      <div class="step5" id="step5">
+        <img src="./assets/images/icon-thank-you.svg" alt="" />
+            <h1>Thank you!</h1>
+            <p>
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </p>
+      </div>
+      <!-- Fifth Step "Thank You" End -->
+    </div>
+    <!-- Form End -->
   </div>
 
   <script href="/app.js"></script>
