@@ -1,0 +1,168 @@
+/* ====================================== Variables ====================================== */
+:root{
+    /* primary colors */
+    --clr-MarineBlue: hsl(213, 96%, 18%);
+    --clr-PurplishBlue: hsl(243, 100%, 62%);
+    --clr-PastelBlue: hsl(228, 100%, 84%);
+    --clr-LightBlue: hsl(206, 94%, 87%);
+    --clr-StrawberryRed: hsl(354, 84%, 57%);
+    /* Neutral colors */
+    --clr-CoolGray: hsl(231, 11%, 63%);
+    --clr-LightGray: hsl(229, 24%, 87%);
+    --clr-Magnolia: hsl(217, 100%, 97%);
+    --clr-Alabaster: hsl(231, 100%, 99%);
+    --clr-White: hsl(0, 0%, 100%);
+}
+@font-face{
+    font-family: ubuntu-bold;
+    src: url(/assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face{
+    font-family: ubuntu-regular;
+    src: url(/assets/fonts/Ubuntu-Regular.ttf);
+}
+@font-face{
+    font-family: ubuntu-medium;
+    src: url(/assets/fonts/Ubuntu-Medium.ttf);
+}
+/* ====================================== General ====================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{  
+    font-family: ubuntu-regular;
+    background-color: var(--clr-LightGray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    background-color: var(--clr-White);
+    padding: 16px;
+    border-radius: 10px;
+    height: 568px;
+    width: 1000px;
+}
+/* ====================================== SideBar Section ====================================== */
+.step-display{
+    flex: 0 275px;
+    max-width: 275px;
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/images/bg-sidebar-desktop.svg);
+    border-radius: 10px;
+}
+.buttons{
+    position: relative;
+    width: 20%;
+    color: var(--clr-White);
+    font-weight: 500;
+    height: 50%;
+    margin-left: 15px;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn1, .btn2, .btn3, .btn4{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--clr-White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titles{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 50%;
+    margin-top: 15%;
+    margin-left: 10px;
+}
+.titles p{
+    color: var(--clr-PastelBlue);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 400;
+}
+.titles span{
+    color: var(--clr-Magnolia);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    font-size: 14px;
+    font-weight: 600;
+}
+.title1{
+    position: inherit;
+}
+/* ====================================== Steps Section ====================================== */
+.hidden{display: none;}
+.steps{
+    flex: 0 725px;
+    max-width: 725px;
+    padding: 35px 100px;
+}
+.step-info{
+    display: flex;
+    flex-direction: column;
+}
+.step-info h1{
+    font-family: ubuntu-bold;
+    color: var(--clr-MarineBlue);
+}
+.step-info .desc{
+    color: var(--clr-CoolGray);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.next-step-btn{
+    border-radius: 5px;
+    border: none;
+    padding: 13px 26px;
+    background-color: var(--clr-MarineBlue);
+    color: var(--clr-Magnolia);
+    cursor: pointer;
+}
+.next-step-btn:hover{
+    background-color: #174a8b;
+}
+/* ====================================== Step 1 Page ====================================== */
+.step-info .error p{
+    color: var(--clr-MarineBlue);
+    font-size: 14px;
+}
+.step-info input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--clr-LightGray);
+    padding: 0 10px;
+    margin: 10px 0 15px;
+    color: var(--clr-MarineBlue);
+    font-family: ubuntu-medium;
+    outline: none;
+}
+.step-info input:focus{
+    border: 1px solid var(--clr-PurplishBlue);
+}
+.step-info input::placeholder{
+    font-family: ubuntu-regular;
+}
+.btn-step1{
+    position: relative;
+    margin-left: 380px;
+    margin-top: 100px;
+}
