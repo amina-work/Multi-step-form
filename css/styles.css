@@ -113,7 +113,9 @@ body{
     position: inherit;
 }
 /* ====================================== Steps Section ====================================== */
-.hidden{display: none; flex-direction: column;}
+.step2, .step3, .step4, .step5{
+    display: none;
+}
 .steps{
     flex: 0 725px;
     max-width: 725px;
@@ -192,6 +194,12 @@ body{
     grid-auto-flow: column;
     margin-bottom: 30px;
 }
+#yearlyPlans{
+    display: none;
+}
+.hidden{
+    display: none;
+}
 .plans .plan-btn,
 .plans .year-plan-btn{
     display: flex;
@@ -247,46 +255,50 @@ body{
 .toggle{
     display: flex;
     width: 100%;
+    align-items: center;
     justify-content: center;
     background-color: var(--clr-Alabaster);
-    padding: 15px 0;
+    padding: 12px 0;
     border-radius: 10px;
 }
-.toggle .check input{
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    top: -30px;
-    left: -30px;
+.toggle .monthly{
+    color: var(--clr-MarineBlue);
 }
-.toggle .check span{
-    position: relative;
-    display: block;
-    padding-left: 30px;
-    cursor: pointer;
+.toggle p{
+    color: var(--clr-CoolGray);
+    font-size: 14px;
 }
-.toggle .check span:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    border-radius: 40px;
-    left: 0;
-    display: block;
-    height: 20px;
+.toggle .check button{
+    margin: 0 25px;
     width: 38px;
+    height: 20px;
+    border-radius: 10px;
     background-color: var(--clr-MarineBlue);
+    border: none;
+    z-index: 1;
+    position: relative;
 }
-.toggle .check span:after {
-    content: '';
+.toggle .check button #circle{
     position: absolute;
-    left: 6px;
-    top: 4px;
     width: 12px;
     height: 12px;
     border-radius: 100%;
-    background-color: var(--clr-White);
+    border: none;
+    background-color: var(--clr-Magnolia);
+    z-index: 11;
+    top: 4px;
+    left: 5px;
 }
-.toggle .check input:checked + span:after {
-    left: 20px;
+.btn-step2{
+    margin-top: 115px;
+    display: flex;
+    justify-content: space-between;
+}
+.back-step-btn{
+    border: none;
+    background-color: transparent;
+    color: var(--clr-CoolGray);
+}
+.back-step-btn:hover{
+    color: var(--clr-MarineBlue);
 }

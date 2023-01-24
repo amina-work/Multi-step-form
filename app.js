@@ -1,5 +1,5 @@
 /* ======================================== Menu Toggle ======================================== */
-/* Check Conditions for Step 1 */
+/* Next step and Go back Buttons */
 function goStepTwo(){
     checkName();
     checkNum();
@@ -7,6 +7,16 @@ function goStepTwo(){
     Achieve();
 }
 
+function backStepOne() {
+    stepInfo.style.display = "flex";
+    step2.style.display = "none";
+    btn1.style.color = "black";
+    btn1.style.backgroundColor = "hsl(228, 100%, 84%)";
+    btn2.style.backgroundColor = "rgb(255, 255, 255, 0)";
+    btn2.style.color = "white";
+}
+
+/* Check Conditions for Step 1 */
 function checkName() {
     let myNameInput = document.getElementById("name");
     let myNameError = document.getElementById("error-name");
@@ -84,23 +94,41 @@ function Achieve() {
         btn2.style.backgroundColor = "hsl(228, 100%, 84%)";
         btn2.style.color = "black";
     }
+    else{
+        stepInfo.style.display = "flex";
+        step2.style.display = "none";
+    }
 }
 
 /* ======================================== Monthly-Yearly Step2 Toggle ======================================== */
+function yearMonthBtn(){
+    toggleMe();
+    //reset();
+}
 /*Is Checkbox in yearly or monthly?*/
-checkBox = document.getElementById("toggle").addEventListener("click", event => {
-    if (event.target.checked) {
+const year = document.getElementById("yearly")
+const month = document.getElementById("monthly")
+function toggleMe(){
+    checkBox = document.getElementById("toggle");
+    circle = document.getElementById("circle");
+    if(yearlyPlans.style.display === "none"){
+        circle.style.left = "20px";
+        monthly.style.color = "hsl(231, 11%, 63%)";
+        yearly.style.color = "hsl(213, 96%, 18%)";
         yearlyPlans.style.display = "flex";
         monthlyPlans.style.display = "none";
         addonAnnee.style.display = "flex";
         addonMois.style.display = "none";
-    } else {
+    } else{
+        circle.style.left = "5px";
+        yearly.style.color = "hsl(231, 11%, 63%)";
+        monthly.style.color = "hsl(213, 96%, 18%)";
         yearlyPlans.style.display = "none";
         monthlyPlans.style.display = "flex";
         addonAnnee.style.display = "none";
         addonMois.style.display = "flex";
     }
-});
+}
 /* MONTHLY Choosing a plan / changing colors */
 checkBox = document.getElementById("monthlyPlanArc").addEventListener("click", event => {
     monthlyPlanArc.style.backgroundColor = "hsl(217, 100%, 97%)";

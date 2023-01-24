@@ -34,8 +34,7 @@
     <!-- Form Start -->
     <div class="steps" id="steps">
       <!-- First Step "Your Info" Start -->
-      <div class="step">
-        <div class="step-info" id="stepInfo">
+      <div class="step-info" id="stepInfo">
           <h1>Personal info</h1>
           <p class="desc">Please provide your name, email, address, and phone number.</p>
 
@@ -51,12 +50,11 @@
           <div class="btn-step1">
             <button onclick="goStepTwo();" class="next-step-btn">Next Step</button>
           </div>
-        </div>
       </div>
       <!-- First Step "Your Info" End -->
 
       <!-- Second Step "Select Plan" Start -->
-      <div class="step2 hidden" id="step2">
+      <div class="step2" id="step2">
         <h1>Select your plan</h1>
         <p class="desc">You have the option of monthly or yearly billing.</p>
         <!-- Monthly plans -->
@@ -102,7 +100,7 @@
           </button>
 
           <!-- Pro Yealy Plan -->
-          <button class="year-plan-btn" id="yearlyPlanPro" onclick="getPrice6()">
+          <button class="year-plan-btn" id="yearlyPlanPro" onclick="getPrice6();">
             <img src="./assets/images/icon-pro.svg" alt="">
             <p>Pro</p>
             <span class="price-year">$150/yr</span>
@@ -112,12 +110,11 @@
 
         <!-- Toglle Btn Between the two-->
         <div class="toggle">
-          <p class="monthly">Monthly</p>
+          <p class="monthly" id="monthly">Monthly</p>
           <label for="" class="check">
-            <input type="checkbox" name="" id="toggle" class="checkbox" checked="checked" onclick="reset()">
-            <span></span>
+            <button id="toggle" class="checkbox" onclick="yearMonthBtn();"><div id="circle"></div></button>
           </label>
-          <p class="yearly">Yearly</p>
+          <p class="yearly" id="yearly">Yearly</p>
         </div>
 
         <div class="btn-step2">
@@ -128,7 +125,7 @@
       <!-- Second Step "Select Plan" End -->
 
       <!-- Third Step "Add-Ons" Start -->
-      <div class="step3 hidden" id="step3">
+      <div class="step3" id="step3">
         <h1>Pick add-ons</h1>
         <p class="desc">Add-ons help enhance your gaming experience.</p>
         <!-- Monthly Add-ons -->
@@ -214,14 +211,14 @@
       <!-- Third Step "Add-Ons" End -->
 
       <!-- Fourth Step "Summary" Start -->
-      <div class="step4 hidden" id="step4">
+      <div class="step4" id="step4">
         <h1>Finishing up</h1>
         <p class="desc">Double-check everything looks OK before confirming.</p>
       </div>
       <!-- Fourth Step "Summary" End -->
 
       <!-- Fifth Step "Thank You" Start -->
-      <div class="step5 hidden" id="step5">
+      <div class="step5" id="step5">
         <img src="./assets/images/icon-thank-you.svg" alt="" />
             <h1>Thank you!</h1>
             <p>
