@@ -190,17 +190,103 @@ body{
     grid-gap: 10px;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
+    margin-bottom: 30px;
 }
-.plans .plan-btn{
+.plans .plan-btn,
+.plans .year-plan-btn{
     display: flex;
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: column;;
     width: 200px;
+    height: 160px;
     border-radius: 10px;
     border: 1px solid var(--clr-CoolGray);
     background-color: var(--clr-White);
     cursor: pointer;
+    padding: 20px 15px;
+}
+.plans .plan-btn img{
+    padding-bottom: 50px;
+}
+.plans .plan-btn p{
+    color: var(--clr-MarineBlue);
+    font-family: ubuntu-medium;
+}
+.plans .plan-btn:hover{
+    border-color: var(--clr-PurplishBlue);
+    background-color: var(--clr-Magnolia);
+}
+.plans .plan-btn .price{
+    color: var(--clr-CoolGray);
+    font-size: 12px;
+    padding-top: 5px;
+}
+.plans .year-plan-btn img{
+    padding-bottom: 35px;
+}
+.plans .year-plan-btn p{
+    color: var(--clr-MarineBlue);
+    font-family: ubuntu-medium;
+}
+.plans .year-plan-btn:hover{
+    border-color: var(--clr-PurplishBlue);
+    background-color: var(--clr-Magnolia);
+}
+.plans .year-plan-btn .price-year{
+    color: var(--clr-CoolGray);
+    font-size: 12px;
+    padding-top: 5px;
+}
+.plans .year-plan-btn .year-deal{
+    font-size: 12px;
+    color: var(--clr-MarineBlue);
+    padding-top: 5px;
 }
 .plan-btn-clicked{
     border: 1px solid var(--clr-PurplishBlue);
+}
+.toggle{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--clr-Alabaster);
+    padding: 15px 0;
+    border-radius: 10px;
+}
+.toggle .check input{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    top: -30px;
+    left: -30px;
+}
+.toggle .check span{
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.toggle .check span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-radius: 40px;
+    left: 0;
+    display: block;
+    height: 20px;
+    width: 38px;
+    background-color: var(--clr-MarineBlue);
+}
+.toggle .check span:after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: var(--clr-White);
+}
+.toggle .check input:checked + span:after {
+    left: 20px;
 }

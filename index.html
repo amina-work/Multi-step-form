@@ -76,7 +76,7 @@
           </button>
 
           <!-- Pro Plan -->
-          <button class="plan-btn" id="monthly-plan-pro" onclick="getPrice3()">
+          <button class="plan-btn" id="monthlyPlanPro" onclick="getPrice3()">
             <img src="./assets/images/icon-pro.svg" alt="">
             <p>Pro</p>
             <span class="price" id="price3">$15/mo</span>
@@ -86,7 +86,7 @@
         <!-- Yearly Plans-->
         <div class="plans" id="yearlyPlans">
           <!-- Arcade Yealy Plan -->
-          <button class="plan-btn" id="yearlyPlanArc" onclick="getPrice4()">
+          <button class="year-plan-btn" id="yearlyPlanArc" onclick="getPrice4()">
             <img src="./assets/images/icon-arcade.svg" alt="">
             <p>Arcade</p>
             <span class="price-year">$90/yr</span>
@@ -94,7 +94,7 @@
           </button>
 
           <!-- Advanced Yealy Plan -->
-          <button class="plan-btn" id="yearlyPlanAdv" onclick="getPrice5()">
+          <button class="year-plan-btn" id="yearlyPlanAdv" onclick="getPrice5()">
             <img src="./assets/images/icon-advanced.svg" alt="">
             <p>Advanced</p>
             <span class="price-year">$120/yr</span>
@@ -102,7 +102,7 @@
           </button>
 
           <!-- Pro Yealy Plan -->
-          <button class="plan-btn" id="yearlyPlanPro" onclick="getPrice6()">
+          <button class="year-plan-btn" id="yearlyPlanPro" onclick="getPrice6()">
             <img src="./assets/images/icon-pro.svg" alt="">
             <p>Pro</p>
             <span class="price-year">$150/yr</span>
@@ -114,7 +114,8 @@
         <div class="toggle">
           <p class="monthly">Monthly</p>
           <label for="" class="check">
-            <input type="checkbox" name="" id="toggle" class="checkbox" checked onclick="reset()"><span></span>
+            <input type="checkbox" name="" id="toggle" class="checkbox" checked="checked" onclick="reset()">
+            <span></span>
           </label>
           <p class="yearly">Yearly</p>
         </div>
