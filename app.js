@@ -16,6 +16,67 @@ function backStepOne() {
     btn2.style.color = "white";
 }
 
+function goStepThree(){
+    if(planPrice !== 0 && planPrice <= 3){
+        step3.style.display = "flex";
+        step2.style.display = "none";
+        btn2.style.backgroundColor = "rgb(255, 255, 255, 0)";
+        btn2.style.color = "white";
+        btn3.style.color = "black";
+        btn3.style.backgroundColor = "hsl(228, 100%, 84%)";
+        monthlyAddOn();
+    } else if(planPrice !== 0 && planPrice > 3){
+        step3.style.display = "flex";
+        step2.style.display = "none";
+        btn2.style.backgroundColor = "rgb(255, 255, 255, 0)";
+        btn2.style.color = "white";
+        btn3.style.color = "black";
+        btn3.style.backgroundColor = "hsl(228, 100%, 84%)";
+        yearlyAddOn();
+    } else{
+        console.log("eoor");
+    }
+}
+function backStepTwo(){
+    step3.style.display = "none";
+    step2.style.display = "flex";
+    btn3.style.backgroundColor = "rgb(255, 255, 255, 0)";
+    btn3.style.color = "white";
+    btn2.style.color = "black";
+    btn2.style.backgroundColor = "hsl(228, 100%, 84%)";
+}
+
+function goStepFour(){
+    step3.style.display = "none";
+    step4.style.display = "flex";
+    btn3.style.backgroundColor = "rgb(255, 255, 255, 0)";
+    btn3.style.color = "white";
+    btn4.style.color = "black";
+    btn4.style.backgroundColor = "hsl(228, 100%, 84%)";
+}
+function backStepThree(){
+    step4.style.display = "none";
+    step3.style.display = "flex";
+    btn4.style.backgroundColor = "rgb(255, 255, 255, 0)";
+    btn4.style.color = "white";
+    btn3.style.color = "black";
+    btn3.style.backgroundColor = "hsl(228, 100%, 84%)";
+}
+function goStepFive(){
+    step4.style.display = "none";
+    step5.style.display = "flex";
+    btn4.style.backgroundColor = "hsl(206, 94%, 87%)";
+    btn4.style.color = "black";
+}
+// Check Conditions for step 3
+function monthlyAddOn(){
+    monthlyAddons.style.display = "flex";
+    yearlyAddons.style.display = "none";
+}
+function yearlyAddOn(){
+    yearlyAddons.style.display = "flex";
+    monthlyAddons.style.display = "none";
+}
 /* Check Conditions for Step 1 */
 function checkName() {
     let myNameInput = document.getElementById("name");
@@ -103,7 +164,16 @@ function Achieve() {
 /* ======================================== Monthly-Yearly Step2 Toggle ======================================== */
 function yearMonthBtn(){
     toggleMe();
-    //reset();
+    reset();
+}
+// Reset all addons to unchecked when change from month to year or from year to month
+function reset(){
+    document.getElementById("onlineMonthly").checked = false;
+    document.getElementById("storageMonthly").checked = false;
+    document.getElementById("customMonthly").checked = false;
+    document.getElementById("onlineYearly").checked = false;
+    document.getElementById("storageYearly").checked = false;
+    document.getElementById("customYearly").checked = false;
 }
 /*Is Checkbox in yearly or monthly?*/
 const year = document.getElementById("yearly")
@@ -246,3 +316,27 @@ checkBox = document.getElementById("yearlyPlanPro").addEventListener("click", ev
     //document.getElementById("priceResume").innerHTML = "9$/mo";
     //document.getElementById("modeTotal").innerHTML = "Total (per month)";
 });
+
+/* FONCTION POUR FAIRE LE TOTAL*/
+
+var planPrice = 0;
+
+function getPrice1() {
+    planPrice = 1;
+}
+
+function getPrice2() {
+    planPrice = 2;
+}
+function getPrice3() {
+    planPrice = 3;
+}
+function getPrice4() {
+    planPrice = 4;
+}
+function getPrice5() {
+    planPrice = 5;
+}
+function getPrice6() {
+    planPrice = 6;
+}

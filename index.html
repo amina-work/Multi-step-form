@@ -129,10 +129,10 @@
         <h1>Pick add-ons</h1>
         <p class="desc">Add-ons help enhance your gaming experience.</p>
         <!-- Monthly Add-ons -->
-        <div id="monthly-addons">
+        <div id="monthlyAddons" class="addons">
           <div class="addons-btn">
             <div class="regroup">
-              <input type="checkbox" id="online-monthly" name="online" value="1">
+              <input type="checkbox" id="onlineMonthly" name="online" value="1">
               <div class="addOn">
                 <p class="addons-size">Online service</p>
                 <span>Access to multiplayer games</span>
@@ -143,7 +143,7 @@
 
           <div class="addons-btn">
             <div class="regroup">
-              <input type="checkbox" id="storage-monthly" name="storage" value="2">
+              <input type="checkbox" id="storageMonthly" name="storage" value="2">
               <div class="addOn">
                 <p class="addons-size">Larger storage</p>
                 <span>1TB of cloud save</span>
@@ -154,7 +154,7 @@
 
           <div class="addons-btn">
             <div class="regroup">
-              <input type="checkbox" id="custom-monthly" name="custom" value="2">
+              <input type="checkbox" id="customMonthly" name="custom" value="2">
               <div class="addOn">
                 <p class="addons-size">Customizable profile</p>
                 <span>Custom theme on your profile</span>
@@ -165,12 +165,12 @@
         </div>
 
         <!-- Yearly Add-ons -->
-        <div id="yearly-addons">
+        <div id="yearlyAddons" class="addons">
           <!-- Online-->
           <div class="addons-btn">
             <div class="regroup">
-              <input type="checkbox" id="online-yearly" name="online" value="10">
-              <div class="addon">
+              <input type="checkbox" id="onlineYearly" name="online" value="10">
+              <div class="addOn">
                 <p class="addons-size">Online service</p>
                 <span>Access to multiplayer games</span>
               </div>
@@ -181,8 +181,8 @@
           <!-- storage-->
           <div class="addons-btn">
             <div class="regroup">
-              <input type="checkbox" id="storage-yearly" name="online" value="20">
-              <div class="addon">
+              <input type="checkbox" id="storageYearly" name="online" value="20">
+              <div class="addOn">
                 <p class="addons-size">Larger storage</p>
                 <span>1TB of cloud save</span>
               </div>
@@ -193,8 +193,8 @@
           <!-- Custom -->
           <div class="addons-btn">
             <div class="regroup">
-              <input type="checkbox" id="custom-yearly" name="online" value="20">
-              <div class="addon">
+              <input type="checkbox" id="customYearly" name="online" value="20">
+              <div class="addOn">
                 <p class="addons-size">Customizable profile</p>
                 <span>Custom theme on your profile</span>
               </div>
@@ -214,6 +214,10 @@
       <div class="step4" id="step4">
         <h1>Finishing up</h1>
         <p class="desc">Double-check everything looks OK before confirming.</p>
+        <div class="btn-step4">
+          <button onclick="backStepThree()" class="back-step-btn">Go Back</button>
+          <button onclick="goStepFive()" class="next-step-btn">Save</button>
+        </div>
       </div>
       <!-- Fourth Step "Summary" End -->
 

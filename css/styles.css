@@ -203,8 +203,8 @@ body{
 .plans .plan-btn,
 .plans .year-plan-btn{
     display: flex;
-    flex-direction: column;;
-    width: 200px;
+    flex-direction: column;
+    width: 165px;
     height: 160px;
     border-radius: 10px;
     border: 1px solid var(--clr-CoolGray);
@@ -298,7 +298,59 @@ body{
     border: none;
     background-color: transparent;
     color: var(--clr-CoolGray);
+    font-family: ubuntu-medium;
 }
 .back-step-btn:hover{
     color: var(--clr-MarineBlue);
+}
+/* ====================================== Step 3 Page ====================================== */
+.step3{
+    flex-direction: column;
+}
+.addons{
+    display: flex;
+    flex-direction: column;
+}
+.addons-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid var(--clr-PurplishBlue);
+    border-radius: 10px;
+}
+.addons-btn .addons-price{
+    padding: 22px;
+    color: var(--clr-PurplishBlue);
+    font-size: 14px;
+}
+.addons-btn:hover{
+    background-color: var(--clr-Magnolia);
+}
+.regroup{
+    display: flex;
+    flex-direction: row;
+}
+.regroup input{
+    margin: 22px;
+    accent-color: var(--clr-PurplishBlue);
+}
+.regroup .addOn{
+    margin: 20px 20px 20px 0;
+}
+.regroup .addOn p{
+    font-size: 14px;
+    font-family: ubuntu-medium;
+    color: var(--clr-MarineBlue);
+}
+.regroup .addOn span{
+    font-size: 12px;
+    color: var(--clr-CoolGray);
+    font-family: ubuntu-medium;
+}
+.btn-step3{
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
 }
